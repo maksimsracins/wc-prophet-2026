@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <!-- Background gradient — near-black with a warm ember at center -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#1c1508"/>
+      <stop offset="60%"  stop-color="#0e0d0b"/>
+      <stop offset="100%" stop-color="#0A0A0C"/>
+    </radialGradient>
+
+    <!-- Football iris gradient -->
+    <radialGradient id="irisGrad" cx="42%" cy="38%" r="58%">
+      <stop offset="0%"   stop-color="#222010"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </radialGradient>
+
+    <!-- Pupil glow gradient -->
+    <radialGradient id="pupilGrad" cx="38%" cy="32%" r="60%">
+      <stop offset="0%"   stop-color="#fff0a0"/>
+      <stop offset="40%"  stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#7a5c00"/>
+    </radialGradient>
+
+    <!-- Wide aura behind the eye -->
+    <radialGradient id="auraGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#D4AF37" stop-opacity="0.18"/>
+      <stop offset="55%"  stop-color="#D4AF37" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Pupil outer halo -->
+    <radialGradient id="haloGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#D4AF37" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Eye whites gradient (warm dark amber tint) -->
+    <linearGradient id="eyeWhiteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#1a1408"/>
+      <stop offset="100%" stop-color="#100f0d"/>
+    </linearGradient>
+
+    <!-- Rounded square clip for app icon shape -->
+    <clipPath id="appIconClip">
+      <rect width="1024" height="1024" rx="224" ry="224"/>
+    </clipPath>
+
+    <!-- Clip to eye shape for football -->
+    <clipPath id="eyeClip">
+      <path d="M 52 512
+               C 52 512 250 148 512 148
+               C 774 148 972 512 972 512
+               C 972 512 774 876 512 876
+               C 250 876 52 512 52 512 Z"/>
+    </clipPath>
+
+    <!-- Glow filter for gold elements -->
+    <filter id="goldGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Strong glow for pupil -->
+    <filter id="pupilGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="22" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft glow for eye outline -->
+    <filter id="eyeGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ── App icon background (rounded square) ────────────────────────── -->
+  <rect width="1024" height="1024" rx="224" ry="224" fill="url(#bgGrad)" clip-path="url(#appIconClip)"/>
+
+  <!-- Ambient aura -->
+  <ellipse cx="512" cy="512" rx="480" ry="380" fill="url(#auraGrad)" clip-path="url(#appIconClip)"/>
+
+  <!-- ── Prophet eye ──────────────────────────────────────────────────── -->
+
+  <!-- Eye whites (the sclera, gold-tinted dark) -->
+  <path d="M 52 512
+           C 52 512 250 148 512 148
+           C 774 148 972 512 972 512
+           C 972 512 774 876 512 876
+           C 250 876 52 512 52 512 Z"
+        fill="url(#eyeWhiteGrad)"
+        stroke="#D4AF37" stroke-width="7"
+        filter="url(#eyeGlow)"
+        clip-path="url(#appIconClip)"/>
+
+  <!-- ── Football (the iris) ──────────────────────────────────────────── -->
+  <circle cx="512" cy="512" r="240"
+          fill="url(#irisGrad)"
+          stroke="#D4AF37" stroke-width="5"
+          clip-path="url(#eyeClip)"/>
+
+  <!-- Football black pentagon patches — classic ball pattern -->
+  <!-- Center pentagon (solid gold) -->
+  <polygon points="512,328 608,396 574,508 450,508 416,396"
+           fill="#D4AF37" opacity="0.95" clip-path="url(#eyeClip)"/>
+
+  <!-- Top-left pentagon (outline) -->
+  <polygon points="328,370 416,320 416,396 344,438 308,380"
+           fill="none" stroke="#D4AF37" stroke-width="5" opacity="0.5" clip-path="url(#eyeClip)"/>
+
+  <!-- Top-right pentagon (outline) -->
+  <polygon points="696,370 608,320 608,396 680,438 716,380"
+           fill="none" stroke="#D4AF37" stroke-width="5" opacity="0.5" clip-path="url(#eyeClip)"/>
+
+  <!-- Bottom-left pentagon (outline) -->
+  <polygon points="310,570 344,438 416,396 450,508 384,570"
+           fill="none" stroke="#D4AF37" stroke-width="5" opacity="0.5" clip-path="url(#eyeClip)"/>
+
+  <!-- Bottom-right pentagon (outline) -->
+  <polygon points="714,570 680,438 608,396 574,508 640,570"
+           fill="none" stroke="#D4AF37" stroke-width="5" opacity="0.5" clip-path="url(#eyeClip)"/>
+
+  <!-- Bottom-center pentagon (outline) -->
+  <polygon points="450,508 574,508 606,620 512,680 418,620"
+           fill="none" stroke="#D4AF37" stroke-width="5" opacity="0.5" clip-path="url(#eyeClip)"/>
+
+  <!-- Far left pentagon (outline) -->
+  <polygon points="276,512 308,380 344,438 310,570 272,570"
+           fill="none" stroke="#D4AF37" stroke-width="4" opacity="0.3" clip-path="url(#eyeClip)"/>
+
+  <!-- Far right pentagon (outline) -->
+  <polygon points="748,512 716,380 680,438 714,570 752,570"
+           fill="none" stroke="#D4AF37" stroke-width="4" opacity="0.3" clip-path="url(#eyeClip)"/>
+
+  <!-- ── Pupil — the golden prophecy ─────────────────────────────────── -->
+
+  <!-- Wide halo -->
+  <circle cx="512" cy="512" r="130" fill="url(#haloGrad)" clip-path="url(#eyeClip)"/>
+
+  <!-- Pupil itself -->
+  <circle cx="512" cy="512" r="80"
+          fill="url(#pupilGrad)"
+          filter="url(#pupilGlow)"
+          clip-path="url(#eyeClip)"/>
+
+  <!-- Pupil inner ring -->
+  <circle cx="512" cy="512" r="80"
+          fill="none" stroke="#ffe57a" stroke-width="3" opacity="0.6"
+          clip-path="url(#eyeClip)"/>
+
+  <!-- Specular highlight -->
+  <ellipse cx="480" cy="482" rx="28" ry="18"
+           fill="white" opacity="0.4"
+           clip-path="url(#eyeClip)"/>
+
+  <!-- Secondary micro-highlight -->
+  <circle cx="540" cy="545" r="8"
+          fill="white" opacity="0.15"
+          clip-path="url(#eyeClip)"/>
+
+  <!-- ── Eye corner gold points ───────────────────────────────────────── -->
+  <circle cx="56"  cy="512" r="14" fill="#D4AF37" filter="url(#goldGlow)" clip-path="url(#appIconClip)"/>
+  <circle cx="968" cy="512" r="14" fill="#D4AF37" filter="url(#goldGlow)" clip-path="url(#appIconClip)"/>
+
+  <!-- ── Outer border ring ────────────────────────────────────────────── -->
+  <rect width="1024" height="1024" rx="224" ry="224"
+        fill="none"
+        stroke="#D4AF37" stroke-width="6" opacity="0.35"
+        clip-path="url(#appIconClip)"/>
+
+  <!-- Inner subtle border for depth -->
+  <rect x="12" y="12" width="1000" height="1000" rx="216" ry="216"
+        fill="none"
+        stroke="#D4AF37" stroke-width="2" opacity="0.12"/>
+</svg>

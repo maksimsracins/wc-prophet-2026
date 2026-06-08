@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1306"/>
+      <stop offset="100%" stop-color="#0A0A0C"/>
+    </radialGradient>
+    <radialGradient id="ballGrad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#1e1a10"/>
+      <stop offset="100%" stop-color="#0A0A0C"/>
+    </radialGradient>
+    <radialGradient id="pupilGrad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#ffe066"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </radialGradient>
+    <filter id="goldGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="eyeClip">
+      <path d="M 3 32 C 3 32 18 10 32 10 C 46 10 61 32 61 32 C 61 32 46 54 32 54 C 18 54 3 32 3 32 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Circular background -->
+  <circle cx="32" cy="32" r="32" fill="url(#bgGrad)"/>
+
+  <!-- Outer gold ring -->
+  <circle cx="32" cy="32" r="30.5" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+
+  <!-- Prophet eye whites (dark gold-tinted) -->
+  <path d="M 3 32 C 3 32 18 10 32 10 C 46 10 61 32 61 32 C 61 32 46 54 32 54 C 18 54 3 32 3 32 Z"
+        fill="#12100a" stroke="#D4AF37" stroke-width="2" filter="url(#softGlow)"/>
+
+  <!-- Football / iris -->
+  <circle cx="32" cy="32" r="15" fill="url(#ballGrad)" stroke="#D4AF37" stroke-width="1.8" clip-path="url(#eyeClip)"/>
+
+  <!-- Football patch lines — simplified classic pattern -->
+  <!-- Center pentagon (filled gold) -->
+  <polygon points="32,21 38.5,26 36,33.5 28,33.5 25.5,26"
+           fill="#D4AF37" opacity="0.92" clip-path="url(#eyeClip)"/>
+
+  <!-- Top-left pentagon (outline) -->
+  <polygon points="21,22 27,20 25.5,26 19,28 18,23"
+           fill="none" stroke="#D4AF37" stroke-width="1.1" opacity="0.45" clip-path="url(#eyeClip)"/>
+
+  <!-- Top-right pentagon (outline) -->
+  <polygon points="43,22 37,20 38.5,26 45,28 46,23"
+           fill="none" stroke="#D4AF37" stroke-width="1.1" opacity="0.45" clip-path="url(#eyeClip)"/>
+
+  <!-- Bottom-left pentagon (outline) -->
+  <polygon points="19,36 25.5,38 28,33.5 22,30 17,33"
+           fill="none" stroke="#D4AF37" stroke-width="1.1" opacity="0.45" clip-path="url(#eyeClip)"/>
+
+  <!-- Bottom-right pentagon (outline) -->
+  <polygon points="45,36 38.5,38 36,33.5 42,30 47,33"
+           fill="none" stroke="#D4AF37" stroke-width="1.1" opacity="0.45" clip-path="url(#eyeClip)"/>
+
+  <!-- Bottom center pentagon (outline) -->
+  <polygon points="28,33.5 36,33.5 37,39 32,43 27,39"
+           fill="none" stroke="#D4AF37" stroke-width="1.1" opacity="0.45" clip-path="url(#eyeClip)"/>
+
+  <!-- Pupil — glowing gold orb (the prophecy) -->
+  <circle cx="32" cy="32" r="5.5" fill="url(#pupilGrad)" filter="url(#goldGlow)"/>
+
+  <!-- Pupil highlight -->
+  <circle cx="30" cy="30" r="1.8" fill="white" opacity="0.55"/>
+
+  <!-- Top eyelid rim glow -->
+  <path d="M 6 28 C 16 13 48 13 58 28"
+        fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- Subtle inner corner sparkle -->
+  <circle cx="5" cy="32" r="1.2" fill="#D4AF37" opacity="0.6"/>
+  <circle cx="59" cy="32" r="1.2" fill="#D4AF37" opacity="0.6"/>
+</svg>
