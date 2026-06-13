@@ -23,7 +23,7 @@ export const WC_FACTS: string[] = [
   'Italy and Brazil have both been eliminated by the host nation — Italy in 1990 (by Argentina in Naples) and Brazil in 2014 (7-1 to Germany on home soil).',
   'The 2026 World Cup is the first with 48 teams — up from 32 — meaning 12 more nations get to experience the world\'s biggest stage.',
   'USA, Canada, and Mexico are the first trio of co-hosts in World Cup history. The tournament spans 16 cities across 3 countries.',
-  'FIFA estimates over 5 billion people watched at least part of the 2022 World Cup — that\'s more than 60% of the entire world population.',
+  'It is estimated over 5 billion people watched at least part of the 2022 World Cup — that\'s more than 60% of the entire world population.',
   'The golden boot winner has never come from the winning nation at the same tournament — the top scorer and champion have never been the same team since 1966.',
   'Andrés Iniesta, who scored Spain\'s 2010 World Cup winning goal, was previously a ball-boy at the 1982 World Cup held in Spain.',
   'Costa Rica\'s 2014 squad had a combined transfer value lower than any single player in England\'s starting XI — and still beat England, Uruguay, and Italy.',

@@ -142,6 +142,7 @@ export default function SplashScreen() {
       <Animated.View style={[styles.ctaContainer, ctaStyle]}>
         <GoldButton label="START PREDICTING" onPress={startGame} />
         <Text style={styles.ctaHint}>72 group matches · full bracket</Text>
+        <Text style={styles.disclaimer}>Unofficial fan app · Not affiliated with or endorsed by FIFA</Text>
       </Animated.View>
     </View>
   );
@@ -244,6 +245,9 @@ const styles = StyleSheet.create({
   facts: {
     flexDirection: 'row',
     gap: SPACING.sm,
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    paddingHorizontal: SPACING.lg,
   },
   factBubble: {
     flexDirection: 'row',
@@ -274,5 +278,13 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: COLORS.textMuted,
     letterSpacing: 0.5,
+  },
+  disclaimer: {
+    fontFamily: FONTS.body,
+    fontSize: 10,
+    color: COLORS.textMuted,
+    opacity: 0.5,
+    textAlign: 'center',
+    letterSpacing: 0.3,
   },
 });

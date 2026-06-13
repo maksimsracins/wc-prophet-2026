@@ -9,7 +9,11 @@
     "backgroundColor": "#0A0A0C",
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.wcprophet.app2026"
+      "bundleIdentifier": "com.wcprophet.app2026",
+      "buildNumber": "3",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -33,6 +37,12 @@
           "iosAppId": "ca-app-pub-7226425291757029~6487214422"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "75769393-7f44-46f6-8281-ea6152691174"
+      }
+    },
+    "owner": "maksimsracins"
   }
 }

@@ -155,7 +155,7 @@ function TeamCard({ team }: { team: Team }) {
           </View>
           <View style={styles.rankBlock}>
             <Text style={styles.rankNum}>#{team.fifaRank}</Text>
-            <Text style={styles.rankLabel}>FIFA</Text>
+            <Text style={styles.rankLabel}>RANK</Text>
           </View>
         </View>
 

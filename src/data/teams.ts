@@ -61,7 +61,7 @@ export const TEAMS: Record<string, Team> = {
     id: 'brazil', name: 'Brazil', shortName: 'BRA',
     flag: '🇧🇷', confederation: 'CONMEBOL', fifaRank: 5,
     bestResult: 'Winners (1958, 1962, 1970, 1994, 2002)',
-    wildFact: 'Brazil is the only nation to have played in every single FIFA World Cup — all 23 editions.',
+    wildFact: 'Brazil is the only nation to have played in every single World Cup — all 23 editions.',
     colors: ['#009C3B', '#FFDF00'],
   },
   argentina: {
@@ -82,7 +82,7 @@ export const TEAMS: Record<string, Team> = {
     id: 'uruguay', name: 'Uruguay', shortName: 'URU',
     flag: '🇺🇾', confederation: 'CONMEBOL', fifaRank: 14,
     bestResult: 'Winners (1930, 1950)',
-    wildFact: 'Uruguay won the very first FIFA World Cup in 1930, hosted on their home soil, with a stadium built in just 8 months.',
+    wildFact: 'Uruguay won the very first World Cup in 1930, hosted on their home soil, with a stadium built in just 8 months.',
     colors: ['#75AADB', '#FFFFFF'],
   },
   ecuador: {
@@ -146,7 +146,7 @@ export const TEAMS: Record<string, Team> = {
     id: 'belgium', name: 'Belgium', shortName: 'BEL',
     flag: '🇧🇪', confederation: 'UEFA', fifaRank: 3,
     bestResult: '3rd place (1986, 2018)',
-    wildFact: 'Belgium\'s "golden generation" peaked at #1 in FIFA rankings for a record 27 months, yet never won a major trophy.',
+    wildFact: 'Belgium\'s "golden generation" peaked at #1 in the world rankings for a record 27 months, yet never won a major trophy.',
     colors: ['#000000', '#EF3340'],
   },
   italy: {
@@ -266,7 +266,7 @@ export const TEAMS: Record<string, Team> = {
     id: 'cameroon', name: 'Cameroon', shortName: 'CMR',
     flag: '🇨🇲', confederation: 'CAF', fifaRank: 48,
     bestResult: 'Quarter-final (1990)',
-    wildFact: 'Roger Milla\'s iconic dancing goal celebration at the 1990 World Cup was so beloved that FIFA lowered the retirement age rule just for him.',
+    wildFact: 'Roger Milla\'s iconic dancing goal celebration at the 1990 World Cup was so beloved that tournament organizers lowered the retirement age rule just for him.',
     colors: ['#007A5E', '#CE1126'],
   },
   south_africa: {
