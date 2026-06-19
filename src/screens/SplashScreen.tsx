@@ -142,7 +142,7 @@ export default function SplashScreen() {
       <Animated.View style={[styles.ctaContainer, ctaStyle]}>
         <GoldButton label="START PREDICTING" onPress={startGame} />
         <Text style={styles.ctaHint}>72 group matches · full bracket</Text>
-        <Text style={styles.disclaimer}>Unofficial fan app · Not affiliated with or endorsed by FIFA</Text>
+        <Text style={styles.disclaimer}>Unofficial fan app · Not officially affiliated or endorsed</Text>
       </Animated.View>
     </View>
   );
