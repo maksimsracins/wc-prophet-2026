@@ -22,7 +22,7 @@ export default function BracketScreen() {
     <View style={[styles.container, { paddingTop: insets.top }]}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>MY BRACKET</Text>
-        <Text style={styles.headerSub}>Your 2026 World Cup picks</Text>
+        <Text style={styles.headerSub}>Your 2026 tournament predictions</Text>
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false}>

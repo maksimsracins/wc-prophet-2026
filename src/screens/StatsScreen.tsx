@@ -45,7 +45,7 @@ export default function StatsScreen() {
       t.shortName.toLowerCase().includes(query.toLowerCase()),
     )
     .sort((a, b) => {
-      if (sort === 'rank') return a.fifaRank - b.fifaRank;
+      if (sort === 'rank') return a.worldRank - b.worldRank;
       if (sort === 'name') return a.name.localeCompare(b.name);
       if (sort === 'confederation') return a.confederation.localeCompare(b.confederation);
       return 0;
@@ -56,7 +56,7 @@ export default function StatsScreen() {
       {/* Header */}
       <View style={styles.header}>
         <Text style={styles.headerTitle}>TEAMS & STATS</Text>
-        <Text style={styles.headerSub}>All 48 nations — 2026 World Cup</Text>
+        <Text style={styles.headerSub}>All 48 nations · 2026 Tournament</Text>
       </View>
 
       {/* Search */}
@@ -154,14 +154,14 @@ function TeamCard({ team }: { team: Team }) {
             </View>
           </View>
           <View style={styles.rankBlock}>
-            <Text style={styles.rankNum}>#{team.fifaRank}</Text>
+            <Text style={styles.rankNum}>#{team.worldRank}</Text>
             <Text style={styles.rankLabel}>RANK</Text>
           </View>
         </View>
 
         {/* Best result */}
         <View style={styles.bestRow}>
-          <Text style={styles.bestLabel}>BEST WC RESULT</Text>
+          <Text style={styles.bestLabel}>BEST RESULT</Text>
           <Text style={styles.bestValue}>{team.bestResult}</Text>
         </View>
 

@@ -155,7 +155,7 @@ function TeamTile({ team, animStyle, onPress }: TileProps) {
           <Text style={styles.teamName}>{team.name.toUpperCase()}</Text>
           <Text style={styles.teamShort}>{team.shortName}</Text>
           <View style={styles.statsRow}>
-            <StatBadge label="RANK" value={`#${team.fifaRank}`} />
+            <StatBadge label="RANK" value={`#${team.worldRank}`} />
             <StatBadge label="BEST" value={team.bestResult.split(' ')[0]} />
             <StatBadge label="" value={team.confederation} accent />
           </View>

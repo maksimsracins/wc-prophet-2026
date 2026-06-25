@@ -118,7 +118,7 @@ export default function SplashScreen() {
         {/* Headline */}
         <Animated.View style={headlineStyle}>
           <Text style={styles.year}>2026</Text>
-          <Text style={styles.headline}>WORLD CUP</Text>
+          <Text style={styles.headline}>FOOTBALL</Text>
           <Text style={styles.subheadline}>PROPHET</Text>
         </Animated.View>
 

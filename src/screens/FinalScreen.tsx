@@ -93,7 +93,7 @@ export default function FinalScreen() {
   const handleShare = () => {
     if (!team) return;
     Share.share({
-      message: `👑 I predict ${team.name} will win the 2026 World Cup! Can you beat my bracket? #WCProphet2026 #WorldCup2026`,
+      message: `👑 I predict ${team.name} will win Football 2026! Can you beat my bracket? #WCProphet2026`,
     });
   };
 
@@ -128,7 +128,7 @@ export default function FinalScreen() {
           <View style={styles.divider} />
 
           <Text style={styles.trophyCardLabel}>WORLD RANKING</Text>
-          <Text style={styles.trophyCardValue}>#{team.fifaRank} in the world</Text>
+          <Text style={styles.trophyCardValue}>#{team.worldRank} in the world</Text>
         </Animated.View>
       </View>
 
