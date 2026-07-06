@@ -93,7 +93,7 @@ export default function FinalScreen() {
   const handleShare = () => {
     if (!team) return;
     Share.share({
-      message: `👑 I predict ${team.name} will win Football 2026! Can you beat my bracket? #WCProphet2026`,
+      message: `👑 I predict ${team.name} will win Football 2026! Can you beat my bracket? #FootballProphet2026`,
     });
   };
 
@@ -140,7 +140,7 @@ export default function FinalScreen() {
           onFallback={handleShare}
         />
         <GoldButton label="START OVER" onPress={resetGame} variant="outline" />
-        <Text style={styles.shareHint}>Share your pick · WC Prophet 2026</Text>
+        <Text style={styles.shareHint}>Share your pick · Football Prophet 2026</Text>
       </Animated.View>
     </View>
   );

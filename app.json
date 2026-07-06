@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "WC Prophet 2026",
+    "name": "Football Prophet 2026",
     "slug": "wc-prophet-2026",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,7 +10,7 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.wcprophet.app2026",
-      "buildNumber": "5",
+      "buildNumber": "6",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }

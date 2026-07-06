@@ -17,21 +17,29 @@ const Tab = createBottomTabNavigator();
 
 function TabIcon({ label, emoji, focused }: { label: string; emoji: string; focused: boolean }) {
   return (
-    <View style={[tabStyles.icon]}>
+    <View style={tabStyles.icon}>
       <Text style={tabStyles.emoji}>{emoji}</Text>
-      <Text style={[tabStyles.label, focused && tabStyles.labelFocused]}>{label}</Text>
+      <Text
+        style={[tabStyles.label, focused && tabStyles.labelFocused]}
+        numberOfLines={1}
+        adjustsFontSizeToFit
+        minimumFontScale={0.7}
+      >
+        {label}
+      </Text>
     </View>
   );
 }
 
 const tabStyles = StyleSheet.create({
-  icon: { alignItems: 'center', gap: 2, paddingTop: 6 },
+  icon: { width: '100%', alignItems: 'center', gap: 2, paddingTop: 6, paddingHorizontal: 4 },
   emoji: { fontSize: 20 },
   label: {
     fontFamily: FONTS.bodyMedium,
     fontSize: 10,
     color: COLORS.textMuted,
     letterSpacing: 0.3,
+    textAlign: 'center',
   },
   labelFocused: { color: COLORS.gold },
 });
@@ -48,6 +56,10 @@ function MainTabs() {
           height: 64,
         },
         tabBarShowLabel: false,
+        // React Navigation's default icon wrapper is a fixed 31x28pt box (Apple HIG
+        // icon sizing) — our tabBarIcon renders an emoji + text label, not just an
+        // icon, so it needs the full tab width or the label wraps/clips.
+        tabBarIconStyle: { width: '100%', height: 44 },
       }}
     >
       <Tab.Screen

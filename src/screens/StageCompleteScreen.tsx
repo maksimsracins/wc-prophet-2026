@@ -62,7 +62,7 @@ export default function StageCompleteScreen() {
   const handleShare = () => {
     const teamNames = top2.map(id => TEAMS[id]?.name ?? id).join(' & ');
     Share.share({
-      message: `I just picked ${teamNames} to advance from ${group?.label ?? 'Group'} in my #WCProphet2026 bracket! 🏆 Can you beat my prediction? Download WC Prophet 2026!`,
+      message: `I just picked ${teamNames} to advance from ${group?.label ?? 'Group'} in my #FootballProphet2026 bracket! 🏆 Can you beat my prediction? Download Football Prophet 2026!`,
     });
   };
 
